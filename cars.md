@@ -16,6 +16,7 @@
 | stolen | TINYINT | NULL | - |
 | fermo_amministrativo | TINYINT | NULL | - |
 | description | TEXT | NULL DEFAULT | - |
+| img | TEXT | NULL ||
 
 ### Schema tabella `models` (relazione 1:N con cars)
 | Nome Colonna | Tipo | Attributi | Indici |
@@ -50,3 +51,9 @@
 |---|---|---|---|
 | id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
 | name | year | NOT NULL | INDEX |
+
+### Schema tabella `imgs` (relazione 1:1 con cars)
+| Nome Colonna | Tipo | Attributi | Indici |
+|---|---|---|---|
+| id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
+| name | TEXT | NULL | |
