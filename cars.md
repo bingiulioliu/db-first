@@ -17,16 +17,30 @@
 | fermo_amministrativo | TINYINT | NULL | - |
 | description | TEXT | NULL DEFAULT | - |
 
-### Schema tabella `models` (relazione N:1 con cars)
+### Schema tabella `models` (relazione 1:N con cars)
 | Nome Colonna | Tipo | Attributi | Indici |
 |---|---|---|---|
 | id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
 | name | VARCHAR(50) | NOT NULL | INDEX |
 | description | TEXT | NULL | |
 
-### Schema tabella `brands` (relazione N:1 con cars e 1:N con models?)
+### Schema tabella `brands` (relazione 1:N con cars e N:1 con models?)
 | Nome Colonna | Tipo | Attributi | Indici |
 |---|---|---|---|
 | id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
 | name | VARCHAR(50) | NOT NULL | INDEX |
+| description | TEXT | NULL | |
+
+### Schema tabella `segments` (relazione 1:N con cars)
+| Nome Colonna | Tipo | Attributi | Indici |
+|---|---|---|---|
+| id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
+| name | CHAR(1) | NOT NULL | INDEX |
+| description | TEXT | NULL | |
+
+### Schema tabella `conditions` (relazione 1:N con cars)
+| Nome Colonna | Tipo | Attributi | Indici |
+|---|---|---|---|
+| id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
+| name | VARCHAR(15) | NOT NULL | INDEX |
 | description | TEXT | NULL | |
