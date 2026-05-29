@@ -4,12 +4,16 @@
 | Nome Colonna | Tipo | Attributi | Indici |
 |---|---|---|---|
 | id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
-| name |  |  |  |
-| model |  |  |  |
-| brand |  |  |  |
-| segment |  |  |  |
-| condition |  |  |  |
-| kilometers |  |  |  |
-| year |  |  |  |
-| color |  |  |  |
-| stolen |  |  |  |
+| name | VARCHAR(100) | NOT NULL |  |
+| model | VARCHAR(50) | NOT NULL | INDEX |
+| brand | VARCHAR(50) | NOT NULL | INDEX |
+| segment | CHAR(1) | NULL | INDEX |
+| vin | CHAR(17) | NOT NULL UNIQUE | |
+| condition | VARCHAR(15) | NOT NULL | INDEX |
+| kilometers | MEDIUMINT | NOT NULL |  |
+| year | SMALLINT | NOT NULL | INDEX |
+| color | VARCHAR(10) | NULL |  |
+| stolen | TINYINT | NULL |  |
+| fermo_amministrativo | TINYINT | NULL | |
+| description | TEXT | NULL DEFAULT | |
+
