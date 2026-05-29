@@ -44,3 +44,9 @@
 | id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
 | name | VARCHAR(15) | NOT NULL | INDEX |
 | description | TEXT | NULL | |
+
+### Schema tabella `years` (relazione 1:N con cars)
+| Nome Colonna | Tipo | Attributi | Indici |
+|---|---|---|---|
+| id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
+| name | year | NOT NULL | INDEX |
