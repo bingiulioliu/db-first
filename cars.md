@@ -17,6 +17,7 @@
 | fermo_amministrativo | TINYINT | NULL | - |
 | description | TEXT | NULL DEFAULT | - |
 | img | TEXT | NULL ||
+| price | CHAR(7) | NOT NULL ||
 
 ### Schema tabella `models` (relazione 1:N con cars)
 | Nome Colonna | Tipo | Attributi | Indici |
@@ -32,7 +33,7 @@
 | name | VARCHAR(50) | NOT NULL | INDEX |
 | description | TEXT | NULL | |
 
-### Schema tabella `segments` (relazione 1:N con cars)
+### Schema tabella `segments` (relazione 1:N con cars e 1:N con models?)
 | Nome Colonna | Tipo | Attributi | Indici |
 |---|---|---|---|
 | id | UNSIGNED INT | NOT NULL | PRIMARY KEY |
